@@ -1,0 +1,1 @@
+D:\CODIGOS\.NETMAUI\Data-Binding\DataBinding\DataBinding.csproj;x64

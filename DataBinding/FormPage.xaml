@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataBinding.FormPage"
+             Title="Formulario"
+             BackgroundColor="#f4f4f4">
+
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="20">
+
+            <Label Text="Formulario para agregar una persona"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   HorizontalOptions="Center" />
+
+            <StackLayout>
+                <Label Text="Nombre" FontSize="18" TextColor="#555" />
+                <Entry x:Name="nombre" Placeholder="Ingrese el nombre" Keyboard="Text" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Apellido" FontSize="18" TextColor="#555" />
+                <Entry x:Name="apellido" Placeholder="Ingrese el apellido" Keyboard="Text" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Sexo" FontSize="18" TextColor="#555" />
+                <HorizontalStackLayout>
+                    <RadioButton x:Name="sexoMasculino"
+                                 Content="Masculino"
+                                 GroupName="Sexo" />
+                    <RadioButton x:Name="sexoFemenino"
+                                 Content="Femenino"
+                                 GroupName="Sexo" />
+                </HorizontalStackLayout>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Fecha de Nacimiento" FontSize="18" TextColor="#555" />
+                <DatePicker x:Name="fechaNacimiento" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="ID Rol" FontSize="18" TextColor="#555" />
+                <Entry x:Name="idRol" Placeholder="Ingrese el ID de rol" Keyboard="Numeric" />
+            </StackLayout>
+
+            <Button Text="Guardar Persona" Clicked="OnGuardarPersonaClicked" 
+                    BackgroundColor="#007ACC" TextColor="White" CornerRadius="5" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
